@@ -24,8 +24,7 @@ def search_recipes(query: str, n_results: int = 3) -> str:
     'What is a good comfort food?', 
     'Suggest a vegetarian Italian dish',
     'What can I make with potatoes?'  
-    --> Returns the most relevant recipes
-    from the embedded recipe corpus.
+    --> Returns the most relevant recipes from the embedded recipe corpus.
     """
     _logs.info(f"[RAG] Searching recipes for: '{query}'")
     results = _collection.query(query_texts=[query], n_results=n_results)
